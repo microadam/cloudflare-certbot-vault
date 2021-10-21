@@ -42,5 +42,6 @@ COPY entrypoint.sh /usr/local/bin/
 COPY initialize.sh /usr/local/bin/
 COPY setup.sh /usr/local/bin/
 COPY 00-update-vault.sh /etc/letsencrypt/renewal-hooks/deploy/
+RUN chmod +x /etc/letsencrypt/renewal-hooks/deploy/00-update-vault.sh
 
 ENTRYPOINT /bin/sh /usr/local/bin/entrypoint.sh
